@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "name": "Ivan",
+  "surname": "Ivanov",
+  "username": "Ivanovich",
+  "email": "ivan.ivanov@gmail.com",
+  "address": {
+    "street": "Kolasa",
+    "house": 5,
+    "apt": 67,
+    "city": "Minsk",
+    "zipcode": "220005"
+  },
+  "phone": "+375297777777",
+  "website": "ivanivanov.org",
+  "company": {
+    "name": "IT Tech",
+    "address": {
+      "street": "Melezha",
+      "house": 1,
+      "apt": 89,
+      "city": "Minsk",
+      "zipcode": "220013"
+    }
+  }
+}
+
