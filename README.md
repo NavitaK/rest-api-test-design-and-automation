@@ -1,1 +1,1 @@
-# restapitestdesignandautomation
+Examples for the presentation "Test Design and Automation for REST API"
