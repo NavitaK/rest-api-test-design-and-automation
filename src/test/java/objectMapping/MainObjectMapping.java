@@ -1,9 +1,9 @@
 package objectMapping;
 
+import objectMapping.builder.UserBuilder;
 import objectMapping.objects.Address;
 import objectMapping.objects.Company;
 import objectMapping.objects.User;
-import objectMapping.builder.UserBuilder;
 
 public class MainObjectMapping {
 
