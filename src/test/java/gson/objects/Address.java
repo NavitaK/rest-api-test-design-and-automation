@@ -1,9 +1,12 @@
 package gson.objects;
 
+import com.google.gson.JsonElement;
+
 public class Address extends DomainObject {
 
     public String getStreet() {
-        return jsonObject.get("street").getAsString();
+        JsonElement streetElement = jsonObject.get("street");
+        return streetElement.isJsonNull() ? null: jsonObject.get("street").getAsString();
     }
 
     public void setStreet(String street) {
