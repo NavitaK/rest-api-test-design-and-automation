@@ -6,7 +6,6 @@ import gson.objects.Address;
 public class MainGsonWithBuilder {
 
     public static void main(String[] args) {
-
         Address address = new Address();
         address.setStreet(null);
         address.setCustomStringField("unknownProperty", "value");
@@ -20,7 +19,6 @@ public class MainGsonWithBuilder {
 
         Address address3 = new AddressBuilder().withAllFields().build();
         System.out.println(address3.getStreet());
-
     }
 
 }
