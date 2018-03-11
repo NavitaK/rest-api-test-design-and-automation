@@ -14,4 +14,12 @@ public abstract class DomainObject {
         this.jsonObject = jsonObject;
     }
 
+    public String getCustomStringField(String fieldName) {
+        return jsonObject.get(fieldName).getAsString();
+    }
+
+    public void setCustomStringField(String fieldName, String value) {
+        jsonObject.addProperty(fieldName, value);
+    }
+
 }

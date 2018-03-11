@@ -6,7 +6,7 @@ public class Address extends DomainObject {
 
     public String getStreet() {
         JsonElement streetElement = jsonObject.get("street");
-        return streetElement.isJsonNull() ? null: jsonObject.get("street").getAsString();
+        return streetElement.isJsonNull() ? null: streetElement.getAsString();
     }
 
     public void setStreet(String street) {
@@ -15,13 +15,5 @@ public class Address extends DomainObject {
 
     // other getters and setters for Address fields
     // ...
-
-    public String getCustomStringField(String fieldName) {
-        return jsonObject.get(fieldName).getAsString();
-    }
-
-    public void setCustomStringField(String fieldName, String value) {
-        jsonObject.addProperty(fieldName, value);
-    }
 
 }
