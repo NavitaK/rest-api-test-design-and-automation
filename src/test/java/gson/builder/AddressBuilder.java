@@ -1,19 +1,19 @@
 package gson.builder;
 
-import gson.objects.AddressGson;
+import gson.objects.Address;
 
 import java.util.Random;
 
-public class AddressGsonBuilder {
+public class AddressBuilder {
 
-    AddressGson address = new AddressGson();
+    Address address = new Address();
 
-    public AddressGsonBuilder withRequiredFieldsOnly() {
+    public AddressBuilder withRequiredFieldsOnly() {
         address.setStreet("Kolasa");
         return this;
     }
 
-    public AddressGsonBuilder withAllFields() {
+    public AddressBuilder withAllFields() {
         withRequiredFieldsOnly();
         // add the rest of the fields
         // ...
@@ -23,7 +23,7 @@ public class AddressGsonBuilder {
     // builder methods that add one field at a time.
     // ...
 
-    public AddressGson build() {
+    public Address build() {
         return address;
     }
 
@@ -34,6 +34,3 @@ public class AddressGsonBuilder {
     }
 
 }
-
-
-
