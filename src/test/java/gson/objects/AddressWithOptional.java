@@ -8,6 +8,10 @@ public class AddressWithOptional extends DomainObjectWithOptional {
 
     public static final String STREET_FIELD = "street";
 
+    public boolean hasStreet() {
+        return jsonObject.has(STREET_FIELD);
+    }
+
     public Optional<String> getStreet() {
         JsonElement streetElement = jsonObject.get(STREET_FIELD);
         return streetElement.isJsonNull() ? Optional.empty(): Optional.of(streetElement.getAsString());

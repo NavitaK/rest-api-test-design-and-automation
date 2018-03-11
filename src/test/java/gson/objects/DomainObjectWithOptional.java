@@ -1,6 +1,5 @@
 package gson.objects;
 
-import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
 import java.util.Optional;
@@ -17,9 +16,13 @@ public abstract class DomainObjectWithOptional {
         this.jsonObject = jsonObject;
     }
 
+    public boolean hasCustomStringField(String fieldName) {
+        return jsonObject.has(fieldName);
+    }
+
     public Optional<String> getCustomStringField(String fieldName) {
-        JsonElement customFieldElement = jsonObject.get(fieldName);
-        return customFieldElement.isJsonNull() ? Optional.empty(): Optional.of(customFieldElement.getAsString());
+        return jsonObject.get(fieldName).isJsonNull() ? Optional.empty():
+            Optional.of(jsonObject.get(fieldName).getAsString());
     }
 
     public void setCustomStringField(String fieldName, String value) {

@@ -1,14 +1,15 @@
 package gson.objects;
 
-import com.google.gson.JsonElement;
-
 public class Address extends DomainObject {
 
     public static final String STREET_FIELD = "street";
 
+    public boolean hasStreet() {
+        return jsonObject.has(STREET_FIELD);
+    }
+
     public String getStreet() {
-        JsonElement streetElement = jsonObject.get(STREET_FIELD);
-        return streetElement.isJsonNull() ? null: streetElement.getAsString();
+        return jsonObject.get(STREET_FIELD).isJsonNull() ? null: jsonObject.get(STREET_FIELD).getAsString();
     }
 
     public void setStreet(String street) {
