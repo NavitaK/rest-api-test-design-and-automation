@@ -21,12 +21,12 @@ public class MainGsonWithBuilderAndOptional {
         }
 
         AddressWithOptional address2 = new AddressBuilderWithOptional().withRequiredFieldsOnly().build();
-        if (address.hasStreet()) {
+        if (address2.hasStreet()) {
             System.out.println(address2.getStreet().orElseThrow(() -> new TestNGException("Street not set")));
         }
 
         AddressWithOptional address3 = new AddressBuilderWithOptional().withAllFields().build();
-        if (address.hasStreet()) {
+        if (address3.hasStreet()) {
             System.out.println(address3.getStreet().orElseThrow(() -> new TestNGException("Street not set")));
         }
     }

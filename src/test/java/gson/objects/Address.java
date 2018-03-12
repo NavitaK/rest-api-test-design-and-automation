@@ -20,3 +20,5 @@ public class Address extends DomainObject {
     // ...
 
 }
+
+
